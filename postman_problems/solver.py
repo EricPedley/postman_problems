@@ -44,7 +44,7 @@ def rpp(edgelist_filename, start_node=None, edge_weight='distance', verbose=Fals
 
     logger_rpp.info('getting odd node pairs')
     odd_nodes = get_odd_nodes(g_req)
-    odd_node_pairs = list(itertools.combinations(odd_nodes, 2))
+    odd_node_pairs = list(combinations(odd_nodes, 2))
 
     logger_rpp.info('get shortest paths between odd nodes')
     odd_node_pairs_shortest_paths = get_shortest_paths_distances(g_full, odd_node_pairs, edge_weight)
