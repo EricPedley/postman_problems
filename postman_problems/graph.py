@@ -150,7 +150,7 @@ def dedupe_matching(matching):
     Returns:
         list[2tuples]: list of node pairs from `matching` deduped (ignoring order).
     """
-    matched_pairs_w_dupes = [tuple(sorted([k, v])) for k, v in matching.items()]
+    matched_pairs_w_dupes = [tuple(sorted([k, v])) for k, v in matching]
     return list(set(matched_pairs_w_dupes))
 
 
